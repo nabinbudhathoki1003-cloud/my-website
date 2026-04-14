@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h2>Login Page</h2>
+
+  <input type="text" id="user" placeholder="Username"><br><br>
+  <input type="password" id="pass" placeholder="Password"><br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p id="msg"></p>
+
+  <script>
+    function login() {
+      var u = document.getElementById("user").value;
+      var p = document.getElementById("pass").value;
+
+      if(u === "admin" && p === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("msg").innerHTML = "Wrong login ❌";
+      }
+    }
+  </script>
+
+</body>
+</html>
